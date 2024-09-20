@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Grid : MonoBehaviour
 {
+    
     public int _GridWith = 10;
     public int _GridHeight = 10;
     public float _CellSize = 1.0f;
@@ -16,7 +17,7 @@ public class Grid : MonoBehaviour
         // Tableau pour stocker des objets GameObject
         public GameObject[] objets;
 
-        // Constructeur qui permet de spécifier la taille du tableau
+        // Constructeur qui permet de spï¿½cifier la taille du tableau
         public Cellule(int tailleArray)
         {
             objets = new GameObject[tailleArray];  // Initialise un tableau de GameObjects
