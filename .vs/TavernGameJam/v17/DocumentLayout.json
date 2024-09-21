@@ -1,0 +1,37 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\GDP Programs\\Unity\\TavernGameJam\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{58B417D5-8D31-7F83-52DF-E9E7A65A8D2F}|Assembly-CSharp.csproj|c:\\gdp programs\\unity\\taverngamejam\\assets\\scripts\\first.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{58B417D5-8D31-7F83-52DF-E9E7A65A8D2F}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\first.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "First.cs",
+              "DocumentMoniker": "C:\\GDP Programs\\Unity\\TavernGameJam\\Assets\\Scripts\\First.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\First.cs",
+              "ToolTip": "C:\\GDP Programs\\Unity\\TavernGameJam\\Assets\\Scripts\\First.cs*",
+              "RelativeToolTip": "Assets\\Scripts\\First.cs*",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-21T00:17:54.542Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
