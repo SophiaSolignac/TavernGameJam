@@ -5,9 +5,9 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "New Furniture", menuName = "Furniture")]
 public class FurnitureData : ScriptableObject
 {
-    [SerializeField] private Texture _VisualAsset = null;
-    [SerializeField] private Vector3 _Size = Vector3.one;
-    [SerializeField] private float _StressValue = 0f;
-    [SerializeField] private bool _CanHaveOnTop = false;
-    [SerializeField] private bool _CanBeOnTop = false;
+    public GameObject prefab = default;
+    public Vector3 size = Vector3.one;
+    public float stressValue = 0f;
+    public bool canHaveOnTop = false;
+    public bool canBeOnTop = false;
 }

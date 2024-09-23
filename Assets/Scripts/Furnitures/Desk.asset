@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aab5575e19234fb489c7069fde714f79, type: 3}
   m_Name: Desk
   m_EditorClassIdentifier: 
-  _VisualAsset: {fileID: 0}
-  _Size: {x: 2, y: 1, z: 3}
-  _StressValue: 0
-  _CanHaveOnTop: 0
-  _CanBeOnTop: 0
+  prefab: {fileID: 5065185948139503765, guid: d6c889d4201f4f047a2bc10630676dda, type: 3}
+  size: {x: 5, y: 3, z: 3}
+  stressValue: 0
+  canHaveOnTop: 1
+  canBeOnTop: 0

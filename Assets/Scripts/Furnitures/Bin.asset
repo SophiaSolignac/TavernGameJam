@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: aab5575e19234fb489c7069fde714f79, type: 3}
-  m_Name: Chair
+  m_Name: Bin
   m_EditorClassIdentifier: 
-  prefab: {fileID: 5065185948139503765, guid: 370a2ea85e950c648be2d32a2c9e44e0, type: 3}
-  size: {x: 1, y: 2, z: 1}
+  prefab: {fileID: 274494087791831950, guid: 8f9384b4c2e0dc842a30431f1f5089ab, type: 3}
+  size: {x: 1, y: 1, z: 1}
   stressValue: 0
   canHaveOnTop: 0
-  canBeOnTop: 0
+  canBeOnTop: 1

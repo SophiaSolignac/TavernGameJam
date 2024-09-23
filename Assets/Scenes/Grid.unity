@@ -122,6 +122,55 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &149121284
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 149121285}
+  - component: {fileID: 149121286}
+  m_Layer: 0
+  m_Name: GameManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &149121285
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 149121284}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &149121286
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 149121284}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8b3a45392b3f50f4b964daf1019b5902, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  furnitureDatas:
+  - {fileID: 11400000, guid: 85d2b2178473d9c4c8b7b03656683667, type: 2}
+  - {fileID: 11400000, guid: b35252acebdc9f34284a344c65ed6eb6, type: 2}
+  - {fileID: 11400000, guid: 9af567cbaa15f4045b34c075bc2a8fe9, type: 2}
+  - {fileID: 11400000, guid: b64f04d6cbee0e447aa6eb6ab2684248, type: 2}
 --- !u!1 &939883203
 GameObject:
   m_ObjectHideFlags: 0
@@ -152,10 +201,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _NewGridSize: {x: 10, y: 5, z: 10}
-  _GridWidth: 5
-  _GridDepth: 9
   _CellSize: 1
-  _LeyerPerCell: 5
   _Cell: {fileID: 2435941898541251487, guid: 6cce255835c5766469319389c7baba2e, type: 3}
 --- !u!4 &939883205
 Transform:
@@ -427,7 +473,8 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 8617227169492068148, guid: 625a9e1ed3f854b4ba51ed9b10f52a04, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 625a9e1ed3f854b4ba51ed9b10f52a04, type: 3}
@@ -436,6 +483,7 @@ SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
   - {fileID: 1144928193}
+  - {fileID: 149121285}
   - {fileID: 1451634915}
   - {fileID: 939883205}
   - {fileID: 3876847438987886771}

@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aab5575e19234fb489c7069fde714f79, type: 3}
   m_Name: Bed
   m_EditorClassIdentifier: 
-  _VisualAsset: {fileID: 0}
-  _Size: {x: 3, y: 1, z: 5}
-  _StressValue: 0
-  _CanHaveOnTop: 0
-  _CanBeOnTop: 0
+  prefab: {fileID: 5065185948139503765, guid: 095e91756ce1f0e42ac4c58526514498, type: 3}
+  size: {x: 2, y: 2, z: 5}
+  stressValue: 0
+  canHaveOnTop: 0
+  canBeOnTop: 0

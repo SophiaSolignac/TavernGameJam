@@ -1,21 +1,25 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text.RegularExpressions;
 using UnityEngine;
 
 public class FurniturePreview : MonoBehaviour
 {
     [SerializeField] private Grid _Grid;
-    [SerializeField] private Transform _BuildingImage;
     [SerializeField] private LayerMask _LayersToHit;
     private Transform _PreviousHoveredCell = null;
 
-    private MeshRenderer _mr;
+    //private MeshRenderer _mr;
     private Vector3 _Size;
     private Vector3 _CenterOffset = Vector3.zero;
     private Plane plane = new(Vector3.down, 0);
 
     private Regex _RegexCellName = new(@"Cellule_(\d+)_(\d+)_(\d+)");
+
+    private GameManager _GM;
+    private FurnitureData _CurrentFurnitureData;
+    private GameObject _CurrentFurniturePrefab;
 
     // SHOULD BE IN GAME MANAGER
     private List<Vector3> _ObjectsToPosition = new List<Vector3>();
@@ -23,13 +27,15 @@ public class FurniturePreview : MonoBehaviour
 
     private void Awake()
     {
-        _mr = GetComponent<MeshRenderer>();
-        _mr.material.color = Color.red;
+        //_mr = GetComponent<MeshRenderer>();
+        //_mr.material.color = Color.red;
 
         // TO REMOVE ONCE WE HAVE GAME MANAGER
         _ObjectsToPosition.Add(new Vector3(1, 1, 1));
         _ObjectsToPosition.Add(new Vector3(2, 1, 3));
         _ObjectsToPosition.Add(new Vector3(3, 3, 3));
+
+        _GM = FindFirstObjectByType<GameManager>();
 
         LoadObject(0);
     }
@@ -38,19 +44,48 @@ public class FurniturePreview : MonoBehaviour
     {
         if (Input.mouseScrollDelta.y != 0)
             LoadObject((int)Input.mouseScrollDelta.y);
+        if (Input.GetMouseButtonDown(1))
+            RotateObjects();
+        if (Input.GetMouseButtonDown(0))
+            DropObject();
+        if (Input.GetMouseButtonDown(2))
+            ToggleGrid();
 
         DetectObjectUnderMouse();
     }
 
     private void LoadObject(int pObjectIndexModifier)
     {
-        _ObjectIndex += pObjectIndexModifier;
-        if (_ObjectIndex >= _ObjectsToPosition.Count) _ObjectIndex -= _ObjectsToPosition.Count;
-        if (_ObjectIndex < 0) _ObjectIndex += _ObjectsToPosition.Count;
+        foreach (Transform lChild in transform)
+            Destroy(lChild.gameObject);
 
-        transform.localScale = _ObjectsToPosition[_ObjectIndex];
-        _CenterOffset = new Vector3((transform.localScale.x - 1) % 2 / 2, (transform.localScale.y - 1) / 2, (transform.localScale.z - 1) % 2 / 2);
+        _CurrentFurnitureData = _GM.LoadObject(pObjectIndexModifier);
+        _CurrentFurniturePrefab = Instantiate(_CurrentFurnitureData.prefab);
+        _CurrentFurniturePrefab.transform.position = transform.position;
+        _CurrentFurniturePrefab.transform.parent = transform;
+        _CurrentFurniturePrefab.transform.Rotate(Vector3.up, _GM._CurrentYRotation, 0);
+
+        _CenterOffset = new Vector3((_CurrentFurnitureData.size.x - 1) % 2 / 2, (_CurrentFurnitureData.size.y - 1) / 2, (_CurrentFurnitureData.size.z - 1) % 2 / 2);
         _PreviousHoveredCell = null;
+    }
+
+    private void RotateObjects()
+    {
+        _GM.RotateObjects();
+        LoadObject(0);
+
+        // APPLIQUEZ SUR LE SPRITE
+        //transform.Rotate(0, 90, 0);
+    }
+
+    private void DropObject()
+    {
+        //if (_mr.material.color == Color.red) return;
+    }
+
+    private void ToggleGrid()
+    {
+        _Grid.ToggleVisibility();
     }
 
     private void DetectObjectUnderMouse()
@@ -60,22 +95,24 @@ public class FurniturePreview : MonoBehaviour
 
         if (Physics.Raycast(ray, out RaycastHit hit, 100, _LayersToHit) && hit.collider.gameObject.TryGetComponent(out Transform hoveredObject))
         {
-            if (IsShapeInGrid(_ObjectsToPosition[_ObjectIndex], hoveredObject))
-                _mr.material.color = Color.green;
-            else
-                _mr.material.color = Color.red;
+            //if (IsShapeInGrid(_ObjectsToPosition[_ObjectIndex], hoveredObject))
+            //if (IsShapeInGrid(_CurrentFurnitureData.size, hoveredObject))
+            //    _mr.material.color = Color.green;
+            //else
+            //    _mr.material.color = Color.red;
 
             if (hoveredObject != _PreviousHoveredCell)
             {
                 _PreviousHoveredCell = hoveredObject;
                 transform.position = hoveredObject.position + _CenterOffset;
+                Debug.Log(transform.position);
             }
         }
         else 
         {
             if (_PreviousHoveredCell != null)
             {
-                _mr.material.color = Color.red;
+                //_mr.material.color = Color.red;
                 _PreviousHoveredCell = null;
             }
             if (plane.Raycast(ray, out distance))
