@@ -1,10 +1,14 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\GDP Programs\\Unity\\TavernGameJam\\",
+  "WorkspaceRootPath": "C:\\ProjetPerso\\Unity\\JamAutumnTavern\\TavernGameJam\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{58B417D5-8D31-7F83-52DF-E9E7A65A8D2F}|Assembly-CSharp.csproj|c:\\gdp programs\\unity\\taverngamejam\\assets\\scripts\\first.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{58B417D5-8D31-7F83-52DF-E9E7A65A8D2F}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\first.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{58B417D5-8D31-7F83-52DF-E9E7A65A8D2F}|Assembly-CSharp.csproj|c:\\projetperso\\unity\\jamautumntavern\\taverngamejam\\assets\\scripts\\grid\\grid.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{58B417D5-8D31-7F83-52DF-E9E7A65A8D2F}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\grid\\grid.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{58B417D5-8D31-7F83-52DF-E9E7A65A8D2F}|Assembly-CSharp.csproj|C:\\ProjetPerso\\Unity\\JamAutumnTavern\\TavernGameJam\\assets\\scripts\\furniturepreview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{58B417D5-8D31-7F83-52DF-E9E7A65A8D2F}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\furniturepreview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -14,19 +18,31 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "First.cs",
-              "DocumentMoniker": "C:\\GDP Programs\\Unity\\TavernGameJam\\Assets\\Scripts\\First.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\First.cs",
-              "ToolTip": "C:\\GDP Programs\\Unity\\TavernGameJam\\Assets\\Scripts\\First.cs*",
-              "RelativeToolTip": "Assets\\Scripts\\First.cs*",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAABAAAAAAAAAA==",
+              "DocumentIndex": 1,
+              "Title": "FurniturePreview.cs",
+              "DocumentMoniker": "C:\\ProjetPerso\\Unity\\JamAutumnTavern\\TavernGameJam\\Assets\\Scripts\\FurniturePreview.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\FurniturePreview.cs",
+              "ToolTip": "C:\\ProjetPerso\\Unity\\JamAutumnTavern\\TavernGameJam\\Assets\\Scripts\\FurniturePreview.cs",
+              "RelativeToolTip": "Assets\\Scripts\\FurniturePreview.cs",
+              "ViewState": "AgIAAEMAAAAAAAAAAAAkwGkAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-21T00:17:54.542Z",
+              "WhenOpened": "2024-09-22T14:33:49.392Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Grid.cs",
+              "DocumentMoniker": "C:\\ProjetPerso\\Unity\\JamAutumnTavern\\TavernGameJam\\Assets\\Scripts\\Grid\\Grid.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Grid\\Grid.cs",
+              "ToolTip": "C:\\ProjetPerso\\Unity\\JamAutumnTavern\\TavernGameJam\\Assets\\Scripts\\Grid\\Grid.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Grid\\Grid.cs",
+              "ViewState": "AgIAADIAAAAAAAAAAAAAAFEAAAAiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-21T16:24:26.086Z",
               "EditorCaption": ""
             }
           ]
